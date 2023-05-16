@@ -17,13 +17,13 @@ if(isset($_POST['submit'])){
    $user_type = "user";
 
    // Check if the email already exists in the database
-   $select = "SELECT email FROM user_db WHERE email = '$email'";
+   $select = "SELECT email FROM user_reg WHERE email = '$email'";
    $result = mysqli_query($conn, $select);
 
    if(mysqli_num_rows($result) == 0){
 
       // Insert the new user into the database
-      $sql = "INSERT INTO user_db (name, email, password, user_type) VALUES ('$name', '$email', '$pass', '$user_type')";
+      $sql = "INSERT INTO user_reg (name, email, password, user_type) VALUES ('$name', '$email', '$pass', '$user_type')";
       $result = mysqli_query($conn, $sql);
 
       if ($result){
