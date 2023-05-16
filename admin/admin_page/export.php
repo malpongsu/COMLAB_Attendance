@@ -3,7 +3,7 @@
 require '../functions/config.php';
 
 // Define the SQL query to retrieve all rows from the "student" table
-$sql = "SELECT * FROM student";
+$sql = "SELECT * FROM students";
 
 // Execute the SQL query using the database connection in $conn and store the result in $res
 $res = mysqli_query($conn, $sql);
