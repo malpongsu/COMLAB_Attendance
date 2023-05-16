@@ -14,7 +14,7 @@
            $user_type = "user";
 
            // Check if email already exists in database
-           $select = "SELECT email FROM user_db WHERE email = '$email'";
+           $select = "SELECT email FROM user_reg WHERE email = '$email'";
            $result = mysqli_query($conn, $select);
 
            if(mysqli_num_rows($result) == 0){
@@ -23,7 +23,7 @@
               if($pass == $cpass){
 
                  // Insert new user into database
-                 $insert = "INSERT INTO user_db (name, email, password, user_type) VALUES ('$name', '$email', '$pass', '$user_type')";
+                 $insert = "INSERT INTO user_reg (name, email, password, user_type) VALUES ('$name', '$email', '$pass', '$user_type')";
                  mysqli_query($conn, $insert);
 
                  // Redirect to login page with success message
