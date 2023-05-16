@@ -11,7 +11,7 @@ if(!isset($_SESSION['admin_name'])){
 }
 
 //Grab all the student from our database
-$student = $database->select("student", [
+$students = $database->select("students", [
     'id',
     'name',
     'rfid_uid'
@@ -132,7 +132,7 @@ if(isset($_GET['id'])) {
                             </thead>
                             <tbody>
                               <?php
-                              $sql = "SELECT * FROM `student`";
+                              $sql = "SELECT * FROM `students`";
                               $result = mysqli_query($conn, $sql);
                               while ($row = mysqli_fetch_assoc($result)) {
                                 ?>
@@ -176,7 +176,7 @@ if(isset($_GET['id'])) {
                 <tbody>
                   <?php
                       //Loop through all our available student
-                      foreach($student as $user) {
+                      foreach($students as $user) {
                           echo '<tr>';
                           echo '<td scope="row">' . $user['name'] . '</td>';
 
@@ -218,7 +218,6 @@ if(isset($_GET['id'])) {
   </div>
 </div>
 </section>
-
   <script src="../js/script.dashboard.js"></script>
 </body>
 </html>
