@@ -20,7 +20,7 @@ if(isset($_POST['submit'])){
    $user_type = $_POST['user_type'];
 
    // Query to select user from the database with the given email and password
-   $select = "SELECT * FROM user_db WHERE email = '$email' AND password = '$pass'";
+   $select = "SELECT * FROM user_reg WHERE email = '$email' AND password = '$pass'";
 
    // Executing the query
    $result_user = mysqli_query($conn, $select);
