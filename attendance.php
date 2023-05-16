@@ -10,7 +10,7 @@ if(!isset($_SESSION['user_name'])){
 }
 
 //Grab all the student from our database
-$student = $database->select("student", [
+$students = $database->select("students", [
     'id',
     'name',
     'rfid_uid'
