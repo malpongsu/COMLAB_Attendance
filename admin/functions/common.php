@@ -9,8 +9,8 @@ use Medoo\Medoo;
 //Modify these settings to match your own configuration.
 $database = new Medoo([
     'database_type' => 'mysql',
-    'database_name' => 'raspberry_rfid_db',
+    'database_name' => 'raspberry_pi_rfid_system',
     'server'        => 'localhost',
-    'username'      => 'root',
-    'password'      => ''
+    'username'      => 'rfid_admin',
+    'password'      => 'rfid_system'
 ]);
