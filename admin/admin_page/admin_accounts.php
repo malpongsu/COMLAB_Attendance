@@ -21,7 +21,7 @@ if(isset($_GET['id'])) {
 // Checking if an ID is present in the URL to delete an admin account
 if(isset($_GET['id'])) {
     $id = $_GET['id'];
-    $delete_query = "DELETE FROM user_db WHERE id = '$id'";
+    $delete_query = "DELETE FROM user_reg WHERE id = '$id'";
     $delete = $conn->query($delete_query);
 
 }
@@ -138,7 +138,7 @@ if(isset($_GET['id'])) {
     </div>
   </div>
   <div class="home-content">
-    <div class="title">STUDENT'S</div>
+    <div class="title">USER</div>
     <div class="attendance box">
       <a href="add_accounts_user.php"> <button type="button" class="btn btn-primary">Add Account</button></a>
       <table class="table table-striped table-responsive">
@@ -155,7 +155,7 @@ if(isset($_GET['id'])) {
         </thead>
         <tbody>
           <?php
-          $sql = "SELECT * FROM `user_db`";
+          $sql = "SELECT * FROM `user_reg`";
           $result = mysqli_query($conn, $sql);
           while ($row = mysqli_fetch_assoc($result)) {
             ?>
