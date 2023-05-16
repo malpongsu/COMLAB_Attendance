@@ -10,7 +10,7 @@ if(!isset($_SESSION['user_name'])){
 }
 
 //Get all students from database
-$student = $database->select("student", [
+$students = $database->select("students", [
     'id',
     'name',
     'rfid_uid'
@@ -155,7 +155,7 @@ $num_days = cal_days_in_month(CAL_GREGORIAN, $current_month, $current_year);
                   <tbody>
                       <?php
                       //Loop through and list all the information of each user including their RFID UID
-                      foreach($student as $user) {
+                      foreach($students as $user) {
                           echo '<tr>';
                           echo '<td scope="row">' . $user['id'] . '</td>';
                           echo '<td>' . $user['name'] . '</td>';
